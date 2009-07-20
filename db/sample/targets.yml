@@ -1,0 +1,16 @@
+home:
+  type: UrlTarget
+  url: /
+  
+login:
+  type: UrlTarget
+  url: /login
+
+ror_mug:
+  type: ProductTarget
+  product: ror_mug
+  
+rails:
+  type: TaxonTarget
+  taxon: rails
+

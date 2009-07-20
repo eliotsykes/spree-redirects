@@ -1,17 +1,11 @@
 # Uncomment this if you reference any of your controllers in activate
-# require_dependency 'application'
+require_dependency 'application'
 
 class RedirectsExtension < Spree::Extension
   version "1.0"
-  description "Describe your extension here"
-  url "http://yourwebsite.com/redirects"
+  description "Redirects extension manages redirect rules for Spree"
+  url "http://github.com/eliotsykes/spree-redirects"
 
-  # Please use redirects/config/routes.rb instead for extension routes.
-
-  # def self.require_gems(config)
-  #   config.gem "gemname-goes-here", :version => '1.2.3'
-  # end
-  
   def activate
 
     # Add your extension tab to the admin.
@@ -30,9 +24,22 @@ class RedirectsExtension < Spree::Extension
     #  end
     #end
 
-    # make your helper avaliable in all views
-    # Spree::BaseController.class_eval do
-    #   helper YourHelper
-    # end
+    Spree::BaseController.class_eval do
+      prepend_before_filter :redirect_filter
+      
+      private
+      def redirect_filter
+        from_path = request.path
+        logger.debug "RedirectsExtension: from_path = '#{from_path}'"
+        redirect = Redirect.find_by_from(from_path)
+        if (redirect.nil?)
+          logger.debug "RedirectsExtension: no redirect found"
+          return
+        end
+        logger.debug "RedirectsExtension: redirecting to '#{redirect}'"
+        redirect_to redirect.target_location, :status => redirect.status
+      end
+    end
+    
   end
 end

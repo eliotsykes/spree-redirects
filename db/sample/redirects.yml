@@ -1,0 +1,20 @@
+home:
+  from: /redirect/home
+  status: 302
+  target: home
+  
+login:
+  from: /l
+  status: 301
+  target: login
+
+ror_mug:
+  from: /ror_mug
+  status: 302
+  target: ror_mug
+  
+rails:
+  from: /some/random/path/to/rails/taxon
+  status: 301
+  target: rails
+
