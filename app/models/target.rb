@@ -2,7 +2,9 @@ class Target < ActiveRecord::Base
   has_many :redirects
   
   def self.find_or_initialize(attributes)
-    type = attributes[:target][:type].constantize
+    type = attributes[:target][:type]
+    return if (type.blank?)
+    type = type.constantize
     if ProductTarget == type
       return type.find_or_initialize_by_product_id attributes[:product][:id]
     elsif TaxonTarget == type

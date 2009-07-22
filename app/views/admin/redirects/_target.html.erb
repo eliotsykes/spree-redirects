@@ -9,20 +9,21 @@
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <%= radio_button :target, :type, UrlTarget %>
   <%= t('custom_url_or_path') %>
+  <%= error_message_on :redirect, :target %>
 </p>
 <p>
   <%= label :product, :id, t('product') %><br />
   <%= collection_select(:product, :id, Product.all, :id, :name, {:include_blank => true}) %>
-  <%= error_message_on :product, :id %>
+  <%= error_message_on :target, :product %>
 </p>
 <p>
   <%= label :taxon, :id, t('taxon') %><br />
   <%= collection_select(:taxon, :id, Taxon.all, :id, :name, {:include_blank => true}) %>
-  <%= error_message_on :taxon, :id %>
+  <%= error_message_on :target, :taxon %>
 </p>
 <p>
   <%= label :target, :url, t('redirect_url') %><br />
   <%= text_field :target, :url  %>
-  <%= error_message_on :target, :url %>
   <%= t('target_url_example') %>
+  <%= error_message_on :target, :url %>
 </p>

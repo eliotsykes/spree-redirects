@@ -2,6 +2,10 @@ class Redirect < ActiveRecord::Base
   
   composed_of :status, :mapping => %w(status code), :converter => Proc.new { |status| Status.new(status) }
   belongs_to :target
+  # Validate that from is a path begining with a slash.
+  validates_format_of :from, :with => /^\/.*$/
+  validates_associated :target
+  validates_presence_of :target
   
   def target_location
     target.location
@@ -14,4 +18,5 @@ class Redirect < ActiveRecord::Base
   def status_summary
     status.summary
   end
+  
 end

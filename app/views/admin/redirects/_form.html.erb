@@ -1,8 +1,8 @@
 <p>
   <%= f.label :from, t('redirects_from') %><br />
   <%= f.text_field :from  %>
-  <%= f.error_message_on :from %>
   <%= t('redirect_from_example') %>
+  <%= f.error_message_on :from %>
 </p>
 
 <p>
@@ -12,5 +12,3 @@
 </p>
 
 <%= render :partial => "target", :locals => { :target => @target } %>
-
-Do validation!
