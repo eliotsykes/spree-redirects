@@ -29,7 +29,8 @@
       <td>
       	<%= link_to_edit redirect %> &nbsp;
       	<%= link_to_delete redirect %> &nbsp;
-      	<%= link_to_with_icon 'direction', t('redirect_test'), redirect.from, :popup => true %>
+      	<%= link_to_with_icon 'direction', t('redirect_test'), redirect.from, 
+      	     :popup => true, :title => t('opens_in_new_window') %>
       </td>
     </tr>
     <% end %>
