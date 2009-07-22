@@ -1,0 +1,39 @@
+<div class='toolbar'>
+  <ul class='actions'>
+    <li>
+      <%= button_link_to t('new_redirect'), new_object_url, :icon => 'add' %></p>
+    </li>
+  </ul>
+  <br class='clear' />
+</div>
+
+
+<h1><%= t('listing_redirects') %></h1>
+
+
+<table class="index">
+  <thead>
+    <th><%= order_by_link :from, :text => t('redirects_from') %></th>
+    <th><%= t('redirects_to') %></th>
+    <th><%= order_by_link :status, :text => t('redirect_status') %></th>
+    <th><%= order_by_link({:target => :type}, :text => t('redirect_target')) %></th>
+    <th><%= t('action') %></th>
+  </thead>
+  <tbody>
+    <%- @collection.each do |redirect|%>
+    <tr id="<%= dom_id redirect %>">
+      <td><%= link_to redirect.from, object_url(redirect) %></td>
+      <td><%= link_to url_for(redirect.target_location), object_url(redirect) %></td>
+      <td><%= t("status_#{redirect.status}") %></td>
+      <td><%= redirect.target_type_humanized %></td>
+      <td>
+      	<%= link_to_edit redirect %> &nbsp;
+      	<%= link_to_delete redirect %> &nbsp;
+      	<%= link_to_with_icon 'direction', t('redirect_test'), redirect.from, :popup => true %>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= page_links(:prev => "&#171; #{t('previous')}", :next => "#{t('next')} &#187;") if @search.page_count > 1 %>

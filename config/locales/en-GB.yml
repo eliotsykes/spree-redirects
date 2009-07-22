@@ -1,5 +1,12 @@
 ---
 en-GB:
-  redirects: "Redirects"
-  redirects_desc: "Redirects for moved pages."
-
+  listing_redirects: Listing Redirects  
+  new_redirect: New Redirect
+  redirect_status: Status  
+  redirect_target: Target
+  redirect_test: Test
+  redirects: Redirects
+  redirects_from: Redirects from
+  redirects_to: To
+  status_301: 301 Moved Permanently
+  status_302: 302 Temporary/Found

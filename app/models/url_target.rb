@@ -4,4 +4,8 @@ class UrlTarget < Target
     url
   end
   
+  def type_humanized
+    'URL'
+  end
+  
 end
