@@ -22,9 +22,9 @@
   <tbody>
     <%- @collection.each do |redirect|%>
     <tr id="<%= dom_id redirect %>">
-      <td><%= link_to redirect.from, object_url(redirect) %></td>
-      <td><%= link_to url_for(redirect.target_location), object_url(redirect) %></td>
-      <td><%= t("status_#{redirect.status}") %></td>
+      <td><%= redirect.from %></td>
+      <td><%= redirect.target_location %></td>
+      <td><%= redirect.status_summary %></td>
       <td><%= redirect.target_type_humanized %></td>
       <td>
       	<%= link_to_edit redirect %> &nbsp;

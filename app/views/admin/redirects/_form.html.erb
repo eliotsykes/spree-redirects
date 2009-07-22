@@ -1,0 +1,19 @@
+<p>
+  <%= f.label :from, t('redirects_from') %><br />
+  <%= f.text_field :from  %>
+  <%= f.error_message_on :from %>
+  <%= t('redirect_from_example') %>
+</p>
+
+<p>
+  <%= f.label :status, t('redirect_status') %><br />
+  <%= f.collection_select(:status, Status::VALUES, :code, :summary) %>
+  <%= f.error_message_on :status %>
+</p>
+
+<p>
+  <%= label :target, :url, t('redirect_url') %><br />
+  <%= text_field :target, :url  %>
+</p>
+
+Do validation!

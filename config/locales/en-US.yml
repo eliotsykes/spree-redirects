@@ -1,10 +1,14 @@
 ---
 en-US:
-  listing_redirects: Listing Redirects  
+  editing_redirect: Editing Redirect
+  listing_redirects: Listing Redirects
   new_redirect: New Redirect
+  redirect: Redirect
+  redirect_from_example: e.g. /old/page/for/product
   redirect_status: Status  
   redirect_target: Target
   redirect_test: Test
+  redirect_url: URL
   redirects: Redirects
   redirects_from: Redirects from
   redirects_to: To

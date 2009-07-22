@@ -1,0 +1,10 @@
+<%= error_messages_for :redirect %>
+<h1><%= t("new_redirect") %></h1>
+
+<% form_for(:redirect, :url => collection_url) do |f| %>
+  <%= render :partial => "form", :locals => { :f => f } %>
+
+  <p class="form-buttons">
+    <%= button t("create") %> <%= link_to t('cancel'), collection_url %>
+  </p>
+<% end %>

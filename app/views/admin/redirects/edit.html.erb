@@ -1,0 +1,10 @@
+<%= error_messages_for :redirect %>
+<h1><%= t("editing_redirect") %></h1>
+
+<% form_for(:redirect, :url => object_url, :html => { :method => :put }) do |f| %>
+  <%= render :partial => "form", :locals => { :f => f } %>
+
+  <p class="form-buttons">
+    <%= button t("update") %> <%= link_to t('cancel'), collection_url %>
+  </p>
+<% end %>

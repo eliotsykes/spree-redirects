@@ -29,7 +29,7 @@ class RedirectsExtension < Spree::Extension
           return
         end
         logger.debug "RedirectsExtension: redirecting to '#{redirect}'"
-        redirect_to redirect.target_location, :status => redirect.status
+        redirect_to redirect.target_location, :status => redirect.status.code
       end
     end
     
