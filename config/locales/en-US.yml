@@ -1,5 +1,6 @@
 ---
 en-US:
+  custom_url_or_path: Custom URL or path
   editing_redirect: Editing Redirect
   listing_redirects: Listing Redirects
   new_redirect: New Redirect
@@ -15,3 +16,5 @@ en-US:
   redirects_to: To
   status_301: 301 Moved Permanently
   status_302: 302 Temporary/Found
+  target_url_example: e.g. /new/page, http://www.any-website.com/new-page.html
+  what_do_you_want_to_redirect_to: What do you want to redirect to?

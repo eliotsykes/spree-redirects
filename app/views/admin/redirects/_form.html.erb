@@ -11,9 +11,6 @@
   <%= f.error_message_on :status %>
 </p>
 
-<p>
-  <%= label :target, :url, t('redirect_url') %><br />
-  <%= text_field :target, :url  %>
-</p>
+<%= render :partial => "target", :locals => { :target => @target } %>
 
 Do validation!

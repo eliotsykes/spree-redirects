@@ -1,0 +1,28 @@
+<p>
+  <%= label :target, :type, t('what_do_you_want_to_redirect_to') %>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <%= radio_button :target, :type, ProductTarget %>
+  <%= t('product') %>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <%= radio_button :target, :type, TaxonTarget %>
+  <%= t('taxon') %>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <%= radio_button :target, :type, UrlTarget %>
+  <%= t('custom_url_or_path') %>
+</p>
+<p>
+  <%= label :product, :id, t('product') %><br />
+  <%= collection_select(:product, :id, Product.all, :id, :name, {:include_blank => true}) %>
+  <%= error_message_on :product, :id %>
+</p>
+<p>
+  <%= label :taxon, :id, t('taxon') %><br />
+  <%= collection_select(:taxon, :id, Taxon.all, :id, :name, {:include_blank => true}) %>
+  <%= error_message_on :taxon, :id %>
+</p>
+<p>
+  <%= label :target, :url, t('redirect_url') %><br />
+  <%= text_field :target, :url  %>
+  <%= error_message_on :target, :url %>
+  <%= t('target_url_example') %>
+</p>

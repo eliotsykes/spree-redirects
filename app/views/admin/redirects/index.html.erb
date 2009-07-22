@@ -23,7 +23,7 @@
     <%- @collection.each do |redirect|%>
     <tr id="<%= dom_id redirect %>">
       <td><%= redirect.from %></td>
-      <td><%= redirect.target_location %></td>
+      <td><%= url_for redirect.target_location %></td>
       <td><%= redirect.status_summary %></td>
       <td><%= redirect.target_type_humanized %></td>
       <td>
