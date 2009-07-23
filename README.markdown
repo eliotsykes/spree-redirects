@@ -1,17 +1,22 @@
-= Redirects
+= Redirects extension for Spree
+[http://github.com/eliotsykes/spree-redirects]
 
-Description goes here
+An extension for managing redirects within Spree.  Useful if you're migrating
+old urls for a previous store to a new store and you or users
+want to be able to do it without touching the server config files.
 
-Fugue Icons
-============================================================
-Copyright (C) 2009 Yusuke Kamiyamane. All rights reserved.
-The icons are licensed under a Creative Commons Attribution
-3.0 license. <http://creativecommons.org/licenses/by/3.0/>
-------------------------------------------------------------
-If you can't or don't want to place link back, please
-purchase a royalty-free license. <http://www.pinvoke.com/>
-------------------------------------------------------------
-I'm unavailable for custom icon design work. But your
-suggestions are always welcome!
-<mailto:yusuke.kamiyamane@gmail.com>
-readme.txt (END) 
+Once you've created a redirect, you can test it from the redirect listings
+screen.
+
+Thanks to [http://www.pinvoke.com/] for the direction sign icon.
+
+Here's a couple of screengrabs so you know what you'll get if you install:
+
+![Redirects listing](redirects-listing.png "Redirects listing")
+
+![New redirect](new-redirect.png "New redirect")
+
+Good luck, feedback and contributions welcome.
+
+[http://github.com/eliotsykes/spree-redirects]
+

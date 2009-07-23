@@ -3,7 +3,7 @@ require_dependency 'application'
 
 class RedirectsExtension < Spree::Extension
   version "1.0"
-  description "Redirects extension manages moved pages for Spree"
+  description "Redirects extension manages redirects for Spree"
   url "http://github.com/eliotsykes/spree-redirects"
 
   def activate
