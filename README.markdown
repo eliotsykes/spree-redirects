@@ -12,9 +12,9 @@ Thanks to [http://www.pinvoke.com/] for the direction sign icon.
 
 Here's a couple of screengrabs so you know what you'll get if you install:
 
-![Redirects listing](redirects-listing.png "Redirects listing")
+![Redirects listing](/redirects-listing.png "Redirects listing")
 
-![New redirect](new-redirect.png "New redirect")
+![New redirect](/new-redirect.png "New redirect")
 
 Good luck, feedback and contributions welcome.
 
