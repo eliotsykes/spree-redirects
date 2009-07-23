@@ -14,6 +14,7 @@ en-US:
   redirects: Redirects
   redirects_from: Redirects from
   redirects_to: To
+  required: required
   status_301: 301 Moved Permanently
   status_302: 302 Temporary/Found
   target_url_example: e.g. /new/page, http://www.any-website.com/new-page.html

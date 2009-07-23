@@ -6,9 +6,13 @@
 </p>
 
 <p>
-  <%= f.label :status, t('redirect_status') %><br />
-  <%= f.collection_select(:status, Status::VALUES, :code, :summary) %>
-  <%= f.error_message_on :status %>
+  <%= label :redirect, :status, t('redirect_status') %>
+  <% Status::VALUES.each do |status_obj| %>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <%= radio_button :redirect, :status, status_obj.code, :checked => (status_obj == @redirect.status) %>
+    <%= status_obj.summary %>
+  <% end %>
+  <%= error_message_on :redirect, :status %>
 </p>
 
 <%= render :partial => "target", :locals => { :target => @target } %>
